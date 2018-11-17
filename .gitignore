@@ -1,0 +1,26 @@
+# IDE specific
+.idea/
+.idea_modules/
+.vscode/
+
+# General
+*.log
+*.tmp
+*.gz
+*.tar
+~$*
+node_modules/
+Thumbs.db
+.DS_Store
+*.exe
+
+# Front end
+**/node_modules/*
+**/dist/*
+
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
