@@ -1,7 +1,7 @@
 package examples
 
 import akka.http.scaladsl.server.directives.Credentials
-import akka.http.scaladsl.server.{HttpApp, Route}
+import akka.http.scaladsl.server.{ HttpApp, Route }
 
 import scala.concurrent.Future
 
@@ -33,7 +33,7 @@ object ExampleHttpApp extends HttpApp {
 
   def userAuthenticator(credential: Credentials): Future[Option[User]] = {
     credential match {
-      case p@Credentials.Provided(identifier) =>
+      case p @ Credentials.Provided(identifier) =>
         for {
           user <- userService.getUser(identifier)
         } yield {

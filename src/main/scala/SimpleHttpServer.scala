@@ -29,7 +29,7 @@ object HttpServerBasic {
     println(s"Start: http://localhost:8080/\nPress RETURN to stop...")
     StdIn.readLine()
     binding
-      .flatMap(_.unbind())
+      .flatMap(_.unbind()) //unbindでリッスンの停止
       .onComplete(_ => system.terminate())
   }
 }
